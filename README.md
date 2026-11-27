@@ -13,7 +13,7 @@ A job application workspace for AI agents: build your profile, find and rank job
 
 ## Installation
 
-All agents need Python 3.10+ and [LaTeX](SETUP.md#latex-for-compiling-cvs-and-cover-letters) with `lualatex` and `xelatex`. Job portal tools also need [Bun](https://bun.sh).
+Install your agent first. All agents need Python 3.10+ and [LaTeX](SETUP.md#latex-for-compiling-cvs-and-cover-letters) with `lualatex` and `xelatex`. Job portal tools also need [Bun](https://bun.sh).
 
 ### 1. Fork and clone
 
@@ -35,61 +35,69 @@ gh repo fork saeedhosan/ai-job-search --clone
 > [!IMPORTANT]
 > A fork of this repo is always public, and setup writes your personal data into tracked files. See [SETUP.md section 8](SETUP.md#8-pulling-upstream-updates-into-your-fork) for private copies and updates.
 
-Then install one agent. The commands below are for macOS and Linux; see each link for other systems.
-
-**Claude Code** ([docs](https://code.claude.com/docs/en/setup))
-
-```bash
-curl -fsSL https://claude.ai/install.sh | bash
-```
-
-**Codex** ([docs](https://github.com/openai/codex))
-
-```bash
-curl -fsSL https://chatgpt.com/codex/install.sh | sh
-```
-
-**OpenCode** ([docs](https://opencode.ai/docs/))
-
-```bash
-curl -fsSL https://opencode.ai/v2/install | bash
-```
-
-**Antigravity** ([docs](https://github.com/google-antigravity/antigravity-cli))
-
-```bash
-curl -fsSL https://antigravity.google/cli/install.sh | bash
-```
-
-## Quick Setup
-
-Start your agent in the repository folder, then build your profile. You can add your CV and other files to [`documents/`](documents/README.md) first.
+Then open the folder in your agent. The workflows come with the repository, so there is no separate plugin or skill install.
 
 **Claude Code**
 
 ```text
+cd my-job-search
 claude
+```
+
+Commands load from `.claude/`. Type `/` and check that `/setup` is listed.
+
+**Codex**
+
+```text
+cd my-job-search
+codex
+```
+
+Skills load from `.agents/skills/`. Run `/skills` and check that `job-setup` is listed.
+
+**OpenCode**
+
+```text
+cd my-job-search
+opencode
+```
+
+Skills load from `.agents/skills/`. Mention `@job-setup` to load the setup skill.
+
+**Antigravity**
+
+```text
+cd my-job-search
+agy
+```
+
+Skills load from `.agents/skills/`. Run `/skills` and check that `job-setup` is listed.
+
+## Quick Setup
+
+Build your profile once. You can add your CV and other files to [`documents/`](documents/README.md) first. Run this inside your agent.
+
+**Claude Code**
+
+```text
 /setup
 ```
 
 **Codex**
 
 ```text
-codex
 $job-setup
 ```
 
 **OpenCode**
 
 ```text
-opencode
 @job-setup
 ```
 
 **Antigravity**
 
 ```text
-agy
 /job-setup
 ```
 
