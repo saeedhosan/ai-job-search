@@ -210,7 +210,7 @@ It runs `bun install` in every portal CLI under `.agents/skills/*/cli/` - discov
 
 For zero-dependency portals such as `linkedin-search` and `freehire-search` the install is optional: they run with plain `bun`; `bun install` only pulls TypeScript dev types.
 
-If your job board has no portal yet, generate one with `/add-portal` — it scaffolds the same CLI structure for any public portal and test-runs a live query before registering — then contribute it to community-portals. See the "Job search tools" section in the README.
+If your job board has no portal yet, generate one with `/add-portal` — it scaffolds the same CLI structure for any public portal and test-runs a live query before registering — then contribute it to community-portals.
 
 ## 4. Run the setup interview
 
@@ -309,7 +309,7 @@ Set-Location cv; lualatex main_<company>_<role>.tex; Set-Location ..
 Set-Location cover_letters; xelatex cover_<company>_<role>.tex; Set-Location ..
 ```
 
-These commands apply to the stock templates (moderncv CV, `cover.cls` cover letter). If you'd rather use your own LaTeX template, run `/add-template` — it captures the template's compile engine, fonts, style rules, and page limit, test-compiles it, and wires it into `/apply`. See the "LaTeX templates" section in the README.
+These commands apply to the stock templates (moderncv CV, `cover.cls` cover letter). If you'd rather use your own LaTeX template, run `/add-template` — it captures the template's compile engine, fonts, style rules, and page limit, test-compiles it, and wires it into `/apply`.
 
 ## 8. Pulling upstream updates into your fork
 
